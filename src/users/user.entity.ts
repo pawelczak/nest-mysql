@@ -14,4 +14,13 @@ export class User {
 
 	@Column()
 	isActive: boolean;
+
+	static of(partialUser: Partial<User>): User {
+		const user = new User();
+
+		Object.assign(user, partialUser);
+
+		return user;
+	}
+
 }
