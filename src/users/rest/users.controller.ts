@@ -55,7 +55,7 @@ export class UsersController {
 	@Delete(':id')
 	async deleteUser(
 		@Param('id', new ParseIntPipe()) id: number,
-		@Res() res: Response,
+		@Res() res: Response
 	) {
 		await this.usersService.deleteUser(id);
 
